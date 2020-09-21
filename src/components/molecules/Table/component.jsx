@@ -1,12 +1,13 @@
 import React from "react";
-import { TableWrapper} from "./style";
+import { TableWrapper, MainTableWrapper, TextWrapper } from "./style";
 
-const Table = ({ text, posX, posY }) => {
+const Table = ({ text, posX, posY, name, id }) => {
   return (
-      <TableWrapper posX={posX} posY={posY}>
-        {text}
+    <MainTableWrapper posX={posX} posY={posY}>
+      <TableWrapper>
+        <TextWrapper> {id} </TextWrapper>
       </TableWrapper>
-  
+    </MainTableWrapper>
   );
 };
 

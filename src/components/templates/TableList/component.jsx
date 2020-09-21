@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { WrapperTableList } from "./style";
+import { WrapperTableList, LabelWrapper } from "./style";
 import { CardList } from "../../organisms";
 import { SearchBar } from "../../molecules";
 
 const MESSAGES = {
   TABLE_IS_EMPTY: "no tiene clientes",
   TABLE_IS_FULL: "está ocupada",
-  TABLE_IS_BOOKED : "está reservada",
-  TABLE_IS_WAITING_FOR_CHECK : "está esperando la cuenta"
-}
+  TABLE_IS_BOOKED: "está reservada",
+  TABLE_IS_WAITING_FOR_CHECK: "está esperando la cuenta",
+};
 
 const TableList = ({ items }) => {
   const [name, setName] = useState("");
 
-
-  const InfoTable = (tableName) => { 
-    const type= Object.keys(MESSAGES)
+  const InfoTable = (tableName) => {
+    const type = Object.keys(MESSAGES);
     const randomMessagekey = type[Math.floor(Math.random() * type.length)];
-    console.log('MESA', randomMessagekey)
-    
+    console.log("MESA", randomMessagekey);
+
     return `La ${tableName} ${MESSAGES[randomMessagekey]} `;
-  }
+  };
 
   const filterTablesByName = (items) => {
     console.log("ITEMS", items);
@@ -39,11 +38,10 @@ const TableList = ({ items }) => {
 
   return (
     <WrapperTableList>
-      <SearchBar text={"Mesas"} onChange={onChangeName} />
-      <CardList
-        items={filterTablesByName(items)}
-        getCardMessage={InfoTable}
-      />
+     
+        <SearchBar text={"Listado de Mesas"} onChange={onChangeName} />
+    
+      <CardList items={filterTablesByName(items)} getCardMessage={InfoTable} />
     </WrapperTableList>
   );
 };

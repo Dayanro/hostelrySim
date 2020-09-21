@@ -1,34 +1,44 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  position: relative;
   height: 100%;
+  width: 100%;
   display: grid;
-  grid-gap: 3px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 40px 1fr 40px;
-  grid-template-areas: 
-      "h h h h "
-      "l m m m "
-      "f f f f ";
+  grid-gap: 0px;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: 60px auto 40px;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "l m m m m m m m m m m m"
+    "f f f f f f f f f f f f";
 `;
 
 export const Header = styled.div`
   grid-area: h;
-  background-color: #96ceb4;
+  position: relative;
+  height:100%;
 `;
 export const List = styled.div`
   grid-area: l;
-  background-color: #88d8b0;
+  background-color: ${({ theme }) => theme.primary.ligthGrey};
 `;
 export const Map = styled.div`
   grid-area: m;
   background-color: #ff6f69;
+  position: relative;
 `;
 export const Footer = styled.div`
   grid-area: f;
-  background-color: #ffcc5c;
+  background-color: ${({ theme }) => theme.secondary.ligthPurple};
+
 `;
 
+export const LabelWrapper = styled.div`
+  background-image: url(/img/dishes.jpg);
+  height: 22%;
+  background-size: cover;
+`;
 
 // .container {
 //     height: 100%; 

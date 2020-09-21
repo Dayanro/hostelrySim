@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const CardListWrapper = styled.div`
+  grid-gap: 0px;
   display: grid;
-  grid-gap: 5px;
+  position: relative;
+  grid-template-columns:1fr;
+  justify-content: center;
 `;

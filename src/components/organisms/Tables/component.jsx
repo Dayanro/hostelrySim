@@ -10,6 +10,8 @@ const Tables = ({ tables }) => {
       {Object.keys(tables).map((table) => (
         <Table
           key={tables[table].name_table}
+          id={tables[table].id_table}
+          name={tables[table].name_table}
           posX={Number(tables[table].x)}
           posY={Number(tables[table].y)}
         />

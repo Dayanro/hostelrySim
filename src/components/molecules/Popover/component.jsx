@@ -1,9 +1,13 @@
 import React from "react";
-import { PopoverWrapper } from "./style";
+import { PopoverWrapper, TextWrapper } from "./style";
 
 const Popover = ({ text }) => {
   
-  return (<PopoverWrapper>{text}</PopoverWrapper>);
+  return (
+    <PopoverWrapper>
+      <TextWrapper>{text}</TextWrapper>
+    </PopoverWrapper>
+  );
 };
 
 export default Popover;

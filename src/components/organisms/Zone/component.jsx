@@ -1,5 +1,5 @@
 import React from "react";
-import { ZoneWrapper, Feature1 } from "./style";
+import { ZoneWrapper } from "./style";
 import Tables from "../Tables/component";
 
 const Zone = ({ zones, tables }) => {
@@ -25,7 +25,6 @@ const Zone = ({ zones, tables }) => {
   return (
     <ZoneWrapper>
       <Tables tables={getTables()} />
-      <Feature1/>
     </ZoneWrapper>
   );
 };

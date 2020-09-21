@@ -1,15 +1,20 @@
 import React from "react";
-import { Wrapper, Header, List, Map, Footer } from "./style";
+import { Wrapper, Header, List, Map, Footer, LabelWrapper } from "./style";
 import TableList from "../TableList/component";
 import TableMap from "../TableMap/component";
+import { NavBar} from "../../organisms"
 
 const Home = ({ floors, zones, tables }) => {
   console.log("HOME", tables);
   return (
     <Wrapper>
-      <Header />
+      <Header>
+        <NavBar logo={"SIM"} />
+      </Header>
       <List>
-        <TableList items={tables} />
+        <LabelWrapper>
+          <TableList items={tables} />
+        </LabelWrapper>
       </List>
       <Map>
         <TableMap tables={tables} zones={zones} floors={floors} />

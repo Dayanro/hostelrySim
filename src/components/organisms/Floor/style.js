@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
 export const FloorWrapper = styled.div`
- position:relative;
+  display: flex;
+  width: 100%;
+  position: relative;
 `;

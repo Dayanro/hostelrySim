@@ -1,27 +1,29 @@
 import styled from "styled-components";
 
 export const InputWrapper = styled.input`
-  font-family: "Nitty-Medium";
-  border-radius: 4px;
-  font-size: 2rem;
-
+  width: 100%;
+  height: 65px;
+  border: 0;
+  font-size: 25px;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  cursor: pointer;
+  appearance: none;
+  line-height: 47px;
+  font-weight: 300;
+  color: #202430;
+  font-family: "Roboto", sans-serif;
   outline: none;
-  padding: 0 16px 1px;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  
+  background: ${({ theme }) => theme.primary.ligthGrey};
 
   &:hover:enabled {
     background-color: ${({ theme }) => theme.primary.ligthGrey};
     color: ${({ theme }) => theme.primary.black};
-    border: 1px solid ${({ theme }) => theme.secondary.black};
   }
   &:active:enabled {
     background-color: ${({ theme }) => theme.primary.ligthGrey};
     color: ${({ theme }) => theme.primary.black};
-    border: 1px solid ${({ theme }) => theme.secondary.black};
   }
   &:disabled {
     opacity: 0.3;
