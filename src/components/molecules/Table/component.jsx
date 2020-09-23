@@ -1,12 +1,17 @@
 import React from "react";
-import { TableWrapper, MainTableWrapper, TextWrapper } from "./style";
 
-const Table = ({ text, posX, posY, name, id }) => {
+import {  MainTableWrapper } from "./style";
+
+const Table = ({  posX, posY, name, id }) => {
   return (
     <MainTableWrapper posX={posX} posY={posY}>
-      <TableWrapper>
-        <TextWrapper> {id} </TextWrapper>
-      </TableWrapper>
+      <div className="tableWrapper">
+        <div className="textWrapper">
+          <div className="tableId">
+            {id}
+          </div>
+        </div>
+      </div>
     </MainTableWrapper>
   );
 };

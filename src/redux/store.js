@@ -1,6 +1,5 @@
 import { createStore, compose } from "redux";
 import rootReducer from "./reducers";
-//import middleWare from "../middleware"
 
 const configureStore = () => {
   const composeEnhancers =

@@ -7,13 +7,11 @@ const CardPopover = ({ item, getCardMessage }) => {
   const cardRef = useRef(null);
 
   const onClick = () => {
-    console.log("Entroo CLICK");
     setDisplayPopover(true);
   };
 
   useEffect(() => {
     const handleClickOutsideCard = (event) => {
-      console.log('CARDREF', cardRef.current)
       if (
         cardRef.current &&
         !cardRef.current.contains(event.target)
@@ -26,8 +24,6 @@ const CardPopover = ({ item, getCardMessage }) => {
       document.removeEventListener("mousedown", handleClickOutsideCard);
     };
   }, [cardRef]);
-
-  console.log("ITEM", item);
 
   const text = item ? getCardMessage(item.name_table) : "";
   return (

@@ -1,5 +1,7 @@
 export { default as Button } from "./Button";
 export { default as Input } from "./Input/component";
-export { default as Label } from "./Label/component";
+export { default as Label } from "./Label";
 export { default as Logo } from "./Logo/component";
+export { default as Icon } from "./Icon";
+export { default as StyledLink } from "./StyledLink";
 

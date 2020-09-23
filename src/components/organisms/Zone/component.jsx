@@ -2,8 +2,7 @@ import React from "react";
 import { ZoneWrapper } from "./style";
 import Tables from "../Tables/component";
 
-const Zone = ({ zones, tables }) => {
-    
+const Zone = ({ zones, tables}) => {
   const getTables = () => {
     const filteredItems = Object.keys(tables)
       .filter(
@@ -13,15 +12,10 @@ const Zone = ({ zones, tables }) => {
         accum[key] = tables[key];
         return accum;
       }, {});
-    console.log("zones.id_zone");
+   
     return filteredItems;
   };
 
-  console.log("getZones", getTables());
-
-  ;
-
-  console.log("ZONE", zones);
   return (
     <ZoneWrapper>
       <Tables tables={getTables()} />

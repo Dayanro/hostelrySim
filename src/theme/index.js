@@ -1,16 +1,18 @@
 const theme = {
   primary: {
     black: "#212121",
+    green: "#5491a2",
     ligthGrey: "#f5f5f5",
     blue: "#a4bdc4",
-    DarkBlue: "#12b5ee",
-    darkGren: "#4b9abd",
-    green: "#2ea44f",
+    darkBlue: "#738689",
+    ligthBlue: "#ebf1f4",
+    ligthGreen: "#3f414e",
+    aquamarine:"#ebf1f4"
   },
   secondary: {
-    ligthPurple: "#c7c4c7",
+    ligthPurple: "#3f414e",
     black: "#45484c",
-    yelow: "#f1e05a",
+    yelow: "#f4e7dc",
     green: "#2b7489",
     red: "#e34c26",
   },

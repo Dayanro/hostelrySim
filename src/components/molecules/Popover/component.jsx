@@ -1,11 +1,17 @@
 import React from "react";
-import { PopoverWrapper, TextWrapper } from "./style";
+import { PopoverWrapper} from "./style";
 
 const Popover = ({ text }) => {
-  
   return (
     <PopoverWrapper>
-      <TextWrapper>{text}</TextWrapper>
+      <div className="frame">
+        <div className="textPopover">
+          Información
+        </div>
+      </div>
+      <div className="textPopover">
+        {text}
+      </div>
     </PopoverWrapper>
   );
 };

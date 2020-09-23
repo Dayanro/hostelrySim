@@ -1,27 +1,25 @@
 import React from "react";
-import { Wrapper, Header, List, Map, Footer, LabelWrapper } from "./style";
+import { Wrapper} from "./style";
 import TableList from "../TableList/component";
 import TableMap from "../TableMap/component";
-import { NavBar} from "../../organisms"
+import { NavBar, Footer} from "../../organisms"
 
 const Home = ({ floors, zones, tables }) => {
-  console.log("HOME", tables);
   return (
     <Wrapper>
-      <Header>
-        <NavBar logo={"SIM"} />
-      </Header>
-      <List>
-        <LabelWrapper>
-          <TableList items={tables} />
-        </LabelWrapper>
-      </List>
-      <Map>
+      <div className="header">
+        <NavBar logo={"Casala"} />
+      </div>
+      <div className="list">
+        <TableList items={tables} />
+      </div>
+      <div className="map">
         <TableMap tables={tables} zones={zones} floors={floors} />
-      </Map>
-      <Footer />
+      </div>
+      <div className="footerBottom">
+        <Footer />
+      </div>
     </Wrapper>
   );
 };
-
 export default Home;

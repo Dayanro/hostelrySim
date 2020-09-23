@@ -3,11 +3,11 @@ import { TableWrapper } from "./style";
 import { Table } from "../../molecules";
 
 const Tables = ({ tables }) => {
-
-  console.log("TABLES", tables);
+  
   return (
     <TableWrapper>
       {Object.keys(tables).map((table) => (
+        
         <Table
           key={tables[table].name_table}
           id={tables[table].id_table}

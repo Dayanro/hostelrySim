@@ -18,10 +18,6 @@ function App() {
     dispatch(loadMap());
   }, [dispatch])
 
-
-  console.log("floorsById", floorsById);
-  console.log("zonesById", zonesById);
-   console.log("tablesById", tablesById);
   return (
     <ThemeProvider theme={theme}>
       <AppWrapper>
